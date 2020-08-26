@@ -1,9 +1,6 @@
 <ul class="navbar-nav ml-auto">
   <% if user_signed_in? %>
     <li class="nav-item menu-right">
-      <%= link_to 'Shopping Cart', '#', class: 'nav-link' %>
-    </li>
-      <li class="nav-item menu-right">
       <%= link_to 'Logout', logout_path, method: :delete, class: 'dropdown-item' %>
     </li>
   <% else %>

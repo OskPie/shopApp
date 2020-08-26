@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get 'signup', to: 'registrations#new', as: :new_signup
   post 'signup', to: 'registrations#create', as: :signup
 
+  resource :products, only: [:index] do
+    resource :order
+  end
+
   namespace :seller do
     get 'signup', to: 'registrations#new', as: :new_signup
     post 'signup', to: 'registrations#create', as: :signup
