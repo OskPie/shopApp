@@ -1,0 +1,4 @@
+$('#modal-label').html('Edit product');
+$('#modal-body').html("<%= escape_javascript(render('edit_form')) %>");
+$('#modal-footer').html("<%= escape_javascript(render('modal_buttons')) %>");
+$('#modal').modal();
