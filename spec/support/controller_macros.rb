@@ -5,4 +5,11 @@ module ControllerMacros
       session[:user_id] = user.id
     end
   end
+
+  def login_seller
+    before do 
+      seller = create(:seller)
+      session[:user_id] = seller.id
+    end
+  end
 end
