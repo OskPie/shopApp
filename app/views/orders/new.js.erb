@@ -1,0 +1,4 @@
+$('#modal-label').html('New order');
+$('#modal-body').html("<%= escape_javascript(render('form')) %>");
+$('#modal-footer').html("<%= escape_javascript(render('modal_buttons')) %>");
+$('#modal').modal();

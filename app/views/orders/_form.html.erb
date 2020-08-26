@@ -1,0 +1,14 @@
+<%= form_with model: @order, scope: :order, url: products_order_path,
+    method: :post, remote: true, html: { id: 'modal-form' } do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <div class="form-group">
+    <%= f.label :product_id %>
+    <%= f.collection_select :product_id, Product.all, :id, :name, {}, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :amount %>
+    <%= f.number_field :amount, class: 'form-control' %>
+  </div>
+<% end %>

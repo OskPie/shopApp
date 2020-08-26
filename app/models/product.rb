@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-  belongs_to :seller
+  belongs_to :seller  
+  has_many :orders
 
   validates :name, :code, uniqueness: true
   validates :name, :quantity, presence: true
